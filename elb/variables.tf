@@ -10,6 +10,7 @@ variable "secret_key" {
   description = "secret_key"
 }
 
+//create one self signed cert and update it here
 variable "ssl_certificate_id" {
   description = "Your ssl_certificate_id"
   default = "arn:aws:iam::180730306053:server-certificate/MyCertificate"
