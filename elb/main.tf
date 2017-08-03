@@ -10,6 +10,7 @@ resource "aws_elb" "elb" {
   connection_draining_timeout = 120
   cross_zone_load_balancing = true
 
+  //create a self signed cert before creating elb
 listener {
     instance_port = "${coalesce(var.https_instance_port, var.instance_port)}"
    instance_protocol = "${coalesce(var.https_instance_protocol, var.instance_protocol)}"
